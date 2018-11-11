@@ -12,8 +12,25 @@
 </head>
 
 <body>
+  <header class="container" role="banner">
+    <h1>Search the National Parks Services API</h1>
+  </header>
   <main class="container" role="main">
+    <form>
+      <label for="states">Enter a state's two-letter postal code (e.g. "CA" for California) or multiple codes separated
+        by commas (CA,WI,OR)</label>
+      <input type="text" name="states" id="js-states"><br>
+      <label for="max-results">Set number of results (max 10)</label>
+      <input type="number" name="max-results" id="js-max-results" value="10">
+      <input type="submit" value="Search">
+    </form>
 
+    <p id="js-error-message" class="error-message"></p>
+    <section id="results" class="hidden">
+      <h2>Search results</h2>
+      <ul id="results-list">
+      </ul>
+    </section>
   </main>
 
   <script src="script.js"></script>
